@@ -1,0 +1,16 @@
+┌──(kali㉿kali)-[~]
+└─$ curl -i networkwalks.com        
+HTTP/1.1 301 Moved Permanently
+Date: Thu, 12 Nov 2026 12:22:45 GMT
+Server: Apache
+Permissions-Policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+Expires: Thu, 12 Nov 2026 13:22:46 GMT
+Cache-Control: max-age=3600
+X-Redirect-By: WordPress - Really Simple Security
+Set-Cookie: __wpdm_client=ec2929ebcbeda6ec8679d7a8092be6d7; path=/; domain=networkwalks.com; HttpOnly
+Location: https://networkwalks.com/
+Referrer-Policy: no-referrer-when-downgrade
+X-Endurance-Cache-Level: 0
+X-nginx-cache: WordPress
+Content-Length: 0
+Content-Type: text/html; charset=UTF-8
