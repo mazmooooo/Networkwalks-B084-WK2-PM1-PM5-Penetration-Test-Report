@@ -66,12 +66,16 @@ In this section of the Penetration testing report, it will cover the reconnaissa
 **Whois**
 
 Figure 1: Whois results
-![](whois-results.1)
+<br>
+![](whois1.png)
+<br>
 Figure 1.1:
-![](whois-results.2)
+<br>
+![](whois2.png)
 <br>
 Figure 1.2:
-![](whois-results.3)
+<br>
+![](whois3.png)
 <br>
 The first step in this reconnaissance process is to use Kali Linux’s “whois” tool, which gave me the registration details of Networkwalks.com. As shown in Figure 1, Figure 1.1, and Figure 1.2, we can see that after running the command “whois Networkwalks.com”, we see the Domain name, Registry WHOIS, Registrar URL, Updated Date, Creation Date, and many more public information about Networkwalks.com.
 <br>
@@ -80,7 +84,9 @@ The first step in this reconnaissance process is to use Kali Linux’s “whois�
 **Whatweb**
 
 Figure 2: Whatweb results
+<br>
 ![](whatweb1.png)
+<br>
 The second step in the reconnaissance process is to use “whatweb”. As shown in Figure 2, the command “whatweb Networkwalks.com” was executed, which shows that Apache is the web server of the target, on top of that, the IP address is “192.232.216.135”, as well as showing that the website redirect visitors to its HTTPS version and provided information regarding cookies associated with the website. This is extremely useful during reconnaissance because identifying the technologies being used by the website you’re targeting can help penetration testers like myself understand the environment before proceeding further in the testing.
 <br>
 <br>
@@ -88,7 +94,9 @@ The second step in the reconnaissance process is to use “whatweb”. As shown 
 **Nslookup**
 
 Figure 3: Nslookup results
+<br>
 ![](nslookup1.png)
+<br>
 The third step in the reconnaissance process is to use “nslookup”. As shown in Figure 3, the command “nslookup Networkwalks.com” was executed, which allowed me to identify the domain name to its IP address, it being “192.232.216.135”.
 <br>
 <br>
@@ -96,7 +104,9 @@ The third step in the reconnaissance process is to use “nslookup”. As shown 
 **Curl**
 
 Figure 4: Curl -I results
+<br>
 ![](curl-i.png)
+<br>
 The fourth step in the reconnaissance process is to use “Curl -I”. As shown in Figure 4, the command “curl -I networkwalks.com” was executed, and I noticed that the website returned a “301 Moved Permanently” response, which indicates that visitors accessing the website are being redirected to its HTTPS version, similar to my findings in Figure 2, which provides encrypted communication between the website and its visitors.
 
 Additionally, another interesting finding is the “X-Redirect-By” header, which identifies WordPress as the application that is responsible for handling the redirect. Along with this, the “Server” header also identifies Apache as the web server being used.
@@ -110,7 +120,9 @@ Lastly, the “Set-Cookie” header also revealed a cookie containing the HttpOn
 **Wafw00f**
 
 Figure 5: Wafw00f results
+<br>
 ![](wafw00f-results.png)
+<br>
 As shown in Figure 5, after running the command “wafw00f networkwalks.com” I was able to identify that Networkwalks.com uses ModSecurity (SpiderLabs) as its Web Application Firewall. This is valuable information because a WAF helps protect web applications by monitoring and filtering incoming HTTP requests that may contain potential malicious activities such as SQL injections and cross-site scripting. Based on this, it gives me an understanding of the security measures that are already in place to protect the website. However, a WAF alone does not guarantee that the website is fully secured, because vulnerabilities still may exist in the website.
 <br>
 <br>
@@ -118,7 +130,9 @@ As shown in Figure 5, after running the command “wafw00f networkwalks.com” I
 **Dnsrecon**
 
 Figure 6: Dnsrecon -d
+<br>
 ![](dnsrecon1.png)
+<br>
 Finally, in the last step of the reconnaissance process, I used the tool “dnsrecon”. As shown in Figure 6, the command “dnsrecon -d networkwalks.com” was executed, which showed a handful of information such as the name servers, mail servers, DNS software information, and more.
 
 Additionally, after reviewing the results further, I discovered the domain’s MX record, which points to “mail.networkwalks.com”. These records identify the mail servers responsible for receiving emails on behalf of a domain, which provides additional insights into the organization’s infrastructure.
@@ -131,17 +145,28 @@ Additionally, after reviewing the results further, I discovered the domain’s M
 </div>
 
 Figure 7: Ifconfig
-![](whatweb1.png)
+<br>
+![](ifconfig.png)
+<br>
 Figure 7.1: Zenmap quick scan
-![](whatweb1.png)
+<br>
+![](zenmap-quick-scan.png)
+<br>
 Figure 7.2: Zenmap Topology
-![](whatweb1.png)
+<br>
+![](zenmap-topology.png)
+<br>
 Figure 7.3: Topology PNG Download
-![](whatweb1.png)
+<br>
+![](topology.png)
+<br>
 Figure 7.4: 10.0.0.1 Host Details
-![](whatweb1.png)
+<br>
+![](host1.png)
+<br>
 Figure 7.5: 10.0.0.2 Host Details
-![](whatweb1.png)
+<br>
+![](host2.png)
 <br>
 <br>
 
